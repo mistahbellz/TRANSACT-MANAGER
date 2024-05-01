@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gantari:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     background-image: url('IMAGES/calculator.jpg');
     background-size: cover;
     margin: 0;
 }
+
 .bodyShade{
     background-color:#79928c ;
     opacity: 0.9;
@@ -16,7 +18,7 @@ body{
     right: 50px;
     top: 50px;
     bottom: 50px;
-    width: 30%;
+    width: 25%;
     height: 820px;
     background-color: white;
     z-index: 9999;
@@ -36,7 +38,7 @@ body{
     background-size: auto 67px;
     background-repeat: no-repeat;
     width: 100%;
-    height: 120px;
+    height: 200px;
 }
 .d1, .d2, .d3, .d4, .d5, .d6 {
     width: auto;
@@ -45,18 +47,23 @@ body{
    }
 
 input {
-    width: 100%; /* Set the width to fill the available space */
-    padding: 10px; /* Add padding for better spacing */
-    border: 1px solid rgb(219, 218, 218); /* Set the border color to grey */
-    border-radius: 5px; /* Optional: Add border radius for rounded corners */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-    margin-bottom: 10px; /* Optional: Add margin below the input field */
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid rgb(219, 218, 218); 
+    border-radius:5px; 
+    box-sizing: border-box;
+    margin-bottom:10px
+}
+input::placeholder {
+    font-size: 12px;
+    opacity: 0.9; 
+    font-family: Gantari;
 }
 .rememberMe{
-    width: 15px; 
-    height: 15px; 
-    border: 2px solid black; /* Optional: Add border for the checkbox */
-    border-radius: 3px; /* Optional: Add border radius for rounded corners */
+    width: 12px; 
+    height: 12px; 
+    border: 2px solid black;
+    border-radius: 3px;
     cursor: pointer;
     margin-right: 5px;
 }
@@ -74,3 +81,42 @@ button[type="submit"] {
     border-radius: 5px; 
     cursor: pointer; 
 }
+#username, #forgotPassword, #password {
+    margin-top: auto;
+  }
+  label{
+    font-family: Gantari;
+    font-size: 15px;
+   
+  }
+  .slogan{
+    display: flex;
+    column-gap: 0.5px;
+    flex-direction: column;
+    height: 80px;
+    width: 600px;
+    position: absolute;
+    left: 50px;      
+    top: 35%;
+    z-index: 10000;
+  }
+  #empower{
+    font-size: 80px;
+    font-family: Passion one;
+    color: white;
+    margin: 0;
+  }
+  
+  #simplify{
+    font-size: 15px;
+    font-family: Poppins;
+    color: white;
+    margin-bottom: auto
+  }
+  #amplify{
+    font-size: 15px;
+    font-family: Poppins;
+    color: darkorange;
+    font-weight: bold;
+    margin-bottom: auto;
+  }
