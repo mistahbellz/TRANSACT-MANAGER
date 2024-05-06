@@ -1,60 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gantari:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    box-sizing: border-box;
-}
-
-body{
-    position: relative;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
 }
-.banner{
-    width: 100%;
-    height: 100px;
-    background-color:#ffff;
-    margin: 0; 
-    position:absolute;
-    top: 0px;
-  }
-  .navBar{
-    background-color: #D6DAC8;
-    width: 100%;
-    height: 50px;
-    margin: 0;
-    position:relative;
-    top: 100px;
-    display: flex;
-    gap: auto;
-    justify-content: center;
-    align-items: center;
-  }
- .navBar ul{
-    list-style: none;
-    display: flex;
-  }
 
-  a{
+.navbar {
+    background-color: #D6DAC8;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:100px;
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.menu li a {
+    display: block;
     text-decoration: none;
     color: #38564e;
-    display: block;
     font-family: Gantari;
-    padding: 3rem;
-  }
-
-  .navBar li:hover{
-    font-weight: bold;
-  }
-
-.inventoryDropDown{
-    position: absolute;
-    left: 490px;
-    top: 50px;
-    background-color: rgb(222, 222, 222);
-    height: 400px;
-    width: 120px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    opacity: 1;
+    padding: 1rem;
+    transition: font-weight 0.3s ease-in-out; 
 }
 
+.menu li a:hover {
+    font-weight: bold; 
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    animation: slideDown 0.3s ease-in-out, fadeInOut 0.3s ease-in-out;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 150px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    padding: 12px 2px;
+    color: #38564e;
+    text-decoration: none;
+    left: 15px;
+    display: block; 
+    transition: background-color 0.3s ease-in-out; 
+}
+.submenu li a:hover {
+    background-color:#e3e3e3;
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dashBoard{
+    position: absolute;
+    display: flex;
+    top: 200px;
+    width: auto;
+    height: 450px;
+    left: 20%;
+    right:20%;
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 15px;
+}
+.dashDisplay{
+    display: flex;
+    flex-direction: column;
+}
+.TSP_pane{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+.topCustomerPane{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.previousMonthChart, .currentMonthChart {
+    width: 120px;
+    height: 160px;
+    border: 3px solid #ccc;
+    padding: 50px;
+    margin: 8px;
+    border-radius: 5px;
+}
+.monthHolders{
+    display: flex;
+}
+.subPane{
+    display: flex;
+    gap: 2px;
+}
+.chartHolders{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chartHeaders{
+font-family:gantari;
+font-size: 20px;
+}
+label{
+    font-family:gantari;
+    font-size: 17px; 
+}
+.indexBox{
+  padding-left: 78px;
+}

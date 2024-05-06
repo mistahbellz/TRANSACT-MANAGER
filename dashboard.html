@@ -3,25 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasboard</title>
+    <title>Responsive Navbar with Dropdown Menu</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="banner"></div>
-    <div class="navBar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" class="dropDown">Inventory</a></li>
-            <li><a href="#">Customer</a></li>
-            <li><a href="#">Vendors</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">Asset Management</a></li>
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Reports</a></li>
-        </ul>
-        <div class="inventoryDropDown"></div>
+
+<nav class="navbar">
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Inventory</a>
+            <ul class="submenu">
+                <li><a href="#">Item A</a></li>
+                <li><a href="#">Item B</a></li>
+                <li><a href="#">Item C</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Customers</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Vendors</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Accounts</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Asset Management</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Company</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="dashBoard">
+    <!-- window for Top Selling products -->
+    <div class="dashDisplay">
+        <div class="TSP_pane">
+            <Label class="chartHeaders">Top Selling Products</Label>
+            <div class="subPane">
+                <div class="chartHolders">
+                    <div class="previousMonthChart">Box 1</div>
+                    <label for="previousMonth" id="previousMonth">Previous Month</label>
+                </div>
+                <div class="chartHolders">
+                    <div class="currentMonthChart">Box 2</div>
+                    <label for="currentMonth" id="currentMonth">Current Month</label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="indexBox">
+            <label for="perfomanceIndex" id="performanceIndex">Performance Index:</label>
+            <span id="indexValue">15%</span>
+        </div>
     </div>
-    <div class="dashboarHolder"></div>
-    
+ 
+    <!-- window for Top Customer -->
+    <div class="dashDisplay">
+
+        <div class="topCustomerPane">
+            <Label class="chartHeaders">Top Customer</Label>
+            <div class="subPane">
+                <div class="chartHolders">
+                    <div class="previousMonthChart">Box 1</div>
+                    <label for="previousMonth" id="previousMonth">Previous Month</label>
+                </div>
+                <div class="chartHolders">
+                    <div class="currentMonthChart">Box 2</div>
+                    <label for="currentMonth" id="currentMonth">Current Month</label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="indexBox">
+            <label for="perfomanceIndex" id="performanceIndex">Performance Index:</label>
+            <span id="indexValue">58%</span>
+        </div>
+        
+    </div>
+</div>
+
+
+
 </body>
 </html>
