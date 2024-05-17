@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Dropdown Menu</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+<div class="banner"><span>Add Company Header Here</span></div>
+<nav class="navbar">
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Inventory</a>
+            <ul class="submenu">
+                <li><a href="#">Item A</a></li>
+                <li><a href="#">Item B</a></li>
+                <li><a href="#">Item C</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Customers</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Vendors</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Accounts</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Asset Management</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-indicator">Company</a>
+            <ul class="submenu">
+                <li><a href="#" >Item D</a></li>
+                <li><a href="#">Item E</a></li>
+                <li><a href="#">Item F</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="invoicePostForm">
+    <div class="cape"><span id="invoicePosting">Invoice Posting</span></div>
+    <div class="branchProfile">
+        <div class="profileGroup1Right">
+            
+            <div class="dataclass-row">
+                <label for="field1">Date:</label>
+                <input type="text" id="date">
+            </div>
+            
+            <div class="dataclass-row">
+                <label for="field2">Location:</label>
+                <input type="text" id="location">
+            </div>
+            
+            <div class="dataclass-row">
+                <label for="field3">Authorized:</label>
+                <input type="text" id="authorized">
+            </div>
+           
+            <div class="dataclass-row">
+                <label for="field4">Payment Type:</label>
+                <input type="text" id="paymentType">
+            </div>
+           
+            <div class="dataclass-row">
+                <label for="field5">Account:</label>
+                <input type="text" id="account">
+            </div>
+        </div>
+        <div class="profileGroup1Left">
+           
+            <div class="dataclass-row">
+                <label for="customer">Customer:</label>
+                <input type="text" id="customer">
+            </div>
+        
+            <div class="dataclass-row">
+                <label for="address" id="addy">Address:</label>
+                <input type="text" id="address">
+            </div>
+
+            <div class="dataclass-row">
+                <label for="invoice">Invoice:</label>
+                <input type="text" id="invoice">
+            </div>
+
+        </div>
+        <div class="middleRowInvoicePosting">
+
+            <div class="upperRows">
+                <div class="cell">
+                    <label for="item">Item</label>
+                    <input type="text" id="item">
+                </div>
+                <div class="cell">
+                    <label for="description">Description</label>
+                    <input type="text" id="description">
+                </div>
+                <div class="cell">
+                    <label for="qty">Qty</label>
+                    <input type="text" id="qty">
+                </div>
+                <div class="cell">
+                    <label for="rate">Rate</label>
+                    <input type="text" id="rate">
+                </div>
+                <div class="cell">
+                    <label for="discount">Discount</label>
+                    <input type="text" id="discount">
+                </div>
+                <div class="cell">
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount">
+                </div>
+                <div class="cell addButton">
+                    <button>Add</button>
+                </div>
+                <div class="cell">
+                    <label for="total">Total</label>
+                    <input type="text" id="total">
+                </div>
+            </div>    
+            <div class="middleRowLastRow">
+                <div class="lastCell">
+                    <label for="amountPaid">Amount Paid</label>
+                    <input type="text" id="amountPaid">
+                </div>
+            </div>
+
+        </div>
+        <div class="lastRowInvoicePosting">
+            <div class="LedgerBalance">
+                <label for="">Balance</label>
+                <input type="text" id="amountPaid">
+                <label for="">Ledger Balance</label>
+                <input type="text" id="amountPaid">
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

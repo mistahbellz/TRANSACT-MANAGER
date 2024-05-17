@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Gantari:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
@@ -159,4 +160,227 @@ label{
 }
 .indexBox{
   padding-left: 78px;
+}
+.invoicePostForm{
+    width: 1120px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    border: 0.1px solid #e0e0e0;
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 200px;
+    border-radius: 17px;
+}
+.cape{
+    position:absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    display: flex;
+    border-radius: 17px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:0px;
+    background-color: rgb(122, 122, 122);
+    align-items: center;
+}
+
+#invoicePosting{
+    font-size: 24px;
+    font-family:gantari;
+    color: rgb(255, 255, 255);
+    margin-left: 7px;
+}
+
+.branchProfile{
+    width: 100%;
+    height: 320px;
+    display: flex;
+    position: absolute;
+    top: 40px;
+    /* border: 1px solid #eeeeee; */
+}
+.upperRows{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.middleRowInvoicePosting{
+    width: 100%;
+    height: 250px;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    top: 340px;
+    border: 1px solid rgb(122, 122, 122);
+    background-color: rgb(122, 122, 122);
+}
+.lastRowInvoicePosting{
+    width: 100%;
+    top: 610px;
+    position:absolute;
+    margin-top: auto;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Styling for the dataclass div */
+.profileGroup1Right {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    justify-self: end; /* Align to the end (extreme right) */
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    margin-right: 10px;
+}
+.profileGroup1Left {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    justify-self: end; /* Align to the end (extreme right) */
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    margin-left: 10px;
+}
+
+/* Styling for the rows inside dataclass */
+.dataclass-row {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Label on left, input on right */
+    gap: 10px;
+    align-items: center;
+}
+
+/* Additional styling for labels and inputs */
+label {
+    text-align: left;
+}
+
+input {
+    width: 250px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.banner{
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.banner > span{
+    font-family: gantari;
+    font-size: 60px;
+    color: #dbdfde;
+}
+
+.dataclass-row > label {
+    font-family:gantari;
+    font-size: 17px;
+    color: rgb(127, 127, 127);
+    display: block;
+}
+
+#address{
+    height: 145px;
+}
+
+#addy{
+    position: relative;
+    top: 10px; 
+}
+
+
+.middleRowInvoicePosting label {
+    font-family:gantari;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.middleRowInvoicePosting input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.addButton {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addButton button {
+    padding: 10px;
+    width: 160px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D6DAC8;
+    color: white;
+    cursor: pointer;
+}
+.cell{
+    display: flex;
+    flex-direction: column;  
+}
+
+.middleRowLastRow{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lastCell{
+    width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    box-sizing: border-box; 
+    padding-right: 10px;   
+}
+
+.lastCell input[type="text"]{
+    width: 270px;
+}
+.LedgerBalance{
+    display: flex;
+    flex-direction: column;
+}
+.LedgerBalance input[type="text"] {
+    width: 270px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.LedgerBalance label{
+    font-family:gantari;
+    font-size: 17px;
+    color: rgb(127, 127, 127);
+    display: block;
 }
